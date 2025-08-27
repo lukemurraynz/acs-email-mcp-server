@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-12-19T12:00:00.000Z" agent="5.0" etag="example" version="24.0.0">
+  <diagram name="Email Service Flow" id="email-service-flow">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Azure Communication Services Email MCP Tool - Email Service Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;fontColor=#0078D4;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="600" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- MCP Request Phase -->
+        <mxCell id="request-phase" value="1. MCP Request Phase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#0078D4;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#0078D4;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="600" height="180" as="geometry" />
+        </mxCell>
+        
+        <!-- AI Agent -->
+        <mxCell id="ai-agent" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/ai_machine_learning/Cognitive_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai-label" value="AI Agent&#xa;(Claude/Copilot)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="175" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- MCP Server -->
+        <mxCell id="mcp-server" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/compute/Function_Apps.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mcp-label" value="MCP Server&#xa;(Azure Functions)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="230" y="185" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Tools -->
+        <mxCell id="email-tools" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Code.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tools-label" value="Email Tools&#xa;(SendEmail/SendSimpleEmail)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="195" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Sample JSON Request -->
+        <mxCell id="json-request" value="Sample MCP Tool Call:&#xa;{&#xa;  &quot;tool&quot;: &quot;SendEmail&quot;,&#xa;  &quot;arguments&quot;: {&#xa;    &quot;to&quot;: &quot;user@example.com&quot;,&#xa;    &quot;subject&quot;: &quot;Meeting Reminder&quot;,&#xa;    &quot;body&quot;: &quot;Don't forget...&quot;,&#xa;    &quot;contentType&quot;: &quot;text/html&quot;&#xa;  }&#xa;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#D4AC0D;strokeWidth=1;fontSize=9;fontColor=#333;align=left;verticalAlign=top;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="520" y="120" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Request Flow Arrows -->
+        <mxCell id="ai-to-mcp" value="MCP JSON-RPC&#xa;Call" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0078D4;strokeWidth=2;fontSize=9;fontColor=#0078D4;" edge="1" parent="1" source="ai-agent" target="mcp-server">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mcp-to-tools" value="Tool Invocation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0078D4;strokeWidth=2;fontSize=9;fontColor=#0078D4;" edge="1" parent="1" source="mcp-server" target="email-tools">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Processing Phase -->
+        <mxCell id="processing-phase" value="2. Email Processing Phase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FFF0;strokeColor=#40E0D0;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#008B8B;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="1300" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Client -->
+        <mxCell id="email-client" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Azure_Communication_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="100" y="340" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="client-label" value="EmailClient&#xa;(Azure SDK)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="415" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Managed Identity Auth -->
+        <mxCell id="auth-step" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/identity/Managed_Identities.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="280" y="340" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="auth-label" value="Managed Identity&#xa;Authentication" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="260" y="415" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Communication Services -->
+        <mxCell id="acs-processing" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Azure_Communication_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="340" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="acs-processing-label" value="Communication&#xa;Services API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="415" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Domain Validation -->
+        <mxCell id="domain-validation" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Email_Communication_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="640" y="340" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="domain-label" value="Domain Validation&#xa;&amp; Configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="620" y="415" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Security -->
+        <mxCell id="email-security" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/security/Azure_Defender.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="820" y="340" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="security-label" value="Email Security&#xa;(SPF/DKIM/DMARC)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="415" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- SMTP Gateway -->
+        <mxCell id="smtp-gateway" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/networking/Front_Doors.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="340" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="gateway-label" value="SMTP Gateway&#xa;&amp; Delivery" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="980" y="415" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Tracking -->
+        <mxCell id="email-tracking" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Azure_Monitor.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="340" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tracking-label" value="Email Analytics&#xa;&amp; Tracking" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="415" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Processing Flow -->
+        <mxCell id="proc-step1" value="1. SDK Call" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=9;fontColor=#40E0D0;" edge="1" parent="1" source="email-client" target="auth-step">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="proc-step2" value="2. Auth Token" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=9;fontColor=#40E0D0;" edge="1" parent="1" source="auth-step" target="acs-processing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="proc-step3" value="3. Validate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=9;fontColor=#40E0D0;" edge="1" parent="1" source="acs-processing" target="domain-validation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="proc-step4" value="4. Security" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=9;fontColor=#40E0D0;" edge="1" parent="1" source="domain-validation" target="email-security">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="proc-step5" value="5. Deliver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=9;fontColor=#40E0D0;" edge="1" parent="1" source="email-security" target="smtp-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="proc-step6" value="6. Track" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=9;fontColor=#40E0D0;" edge="1" parent="1" source="smtp-gateway" target="email-tracking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Domain Configuration Details -->
+        <mxCell id="domain-details" value="Domain Configuration Details" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#FFB366;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#D2691E;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="100" y="450" width="300" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="domain-config" value="Azure Managed Domain:&#xa;• Format: xxxxxxxx-xxxx-xxxx.azurecomm.net&#xa;• Auto-configured SPF/DKIM records&#xa;• No DNS configuration required&#xa;&#xa;Custom Domain (Optional):&#xa;• Requires DNS verification&#xa;• TXT record validation&#xa;• SPF, DKIM, DMARC setup" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="120" y="480" width="260" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Delivery Phase -->
+        <mxCell id="delivery-phase" value="3. Email Delivery &amp; Monitoring Phase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0F5;strokeColor=#FF69B4;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#C71585;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="750" y="80" width="600" height="180" as="geometry" />
+        </mxCell>
+        
+        <!-- Recipients -->
+        <mxCell id="recipients" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Email.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="120" width="60" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="recipients-label" value="Email Recipients" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="780" y="175" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Delivery Status -->
+        <mxCell id="delivery-status" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Application_Insights.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="120" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="status-label" value="Delivery Status&#xa;Tracking" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="960" y="195" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- MCP Response -->
+        <mxCell id="mcp-response" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Code.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="120" width="68" height="68" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="response-label" value="MCP Response&#xa;to Client" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="195" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Delivery Flow -->
+        <mxCell id="delivery-flow" value="SMTP Delivery" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=3;fontSize=9;fontColor=#4CAF50;" edge="1" parent="1" source="smtp-gateway" target="recipients">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1034" y="300" />
+              <mxPoint x="1400" y="300" />
+              <mxPoint x="1400" y="60" />
+              <mxPoint x="830" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="status-flow" value="Status Updates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF69B4;strokeWidth=2;fontSize=9;fontColor=#FF69B4;" edge="1" parent="1" source="email-tracking" target="delivery-status">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1214" y="300" />
+              <mxPoint x="1380" y="300" />
+              <mxPoint x="1380" y="80" />
+              <mxPoint x="1014" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="response-flow" value="JSON Response" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF69B4;strokeWidth=2;fontSize=9;fontColor=#FF69B4;" edge="1" parent="1" source="delivery-status" target="mcp-response">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Sample Response -->
+        <mxCell id="sample-response" value="Sample MCP Response:&#xa;{&#xa;  &quot;success&quot;: true,&#xa;  &quot;operationId&quot;: &quot;abc123...&quot;,&#xa;  &quot;messageId&quot;: &quot;msg456...&quot;,&#xa;  &quot;status&quot;: &quot;Queued&quot;,&#xa;  &quot;timestamp&quot;: &quot;2024-12-19T12:00:00Z&quot;&#xa;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F8FF;strokeColor=#4169E1;strokeWidth=1;fontSize=9;fontColor=#333;align=left;verticalAlign=top;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="230" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Error Handling Section -->
+        <mxCell id="error-section" value="Error Handling &amp; Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#FF6B6B;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#CC0000;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="450" y="450" width="450" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="error-types" value="Common Error Scenarios:&#xa;• DomainNotLinked: Sender domain not configured&#xa;• Unauthorized: Missing/invalid authentication&#xa;• InvalidRecipient: Malformed email addresses&#xa;• RateLimitExceeded: Too many requests&#xa;• MessageTooLarge: Content exceeds size limits&#xa;• SuppressionListMatch: Recipient opted out" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="470" y="480" width="410" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Types Section -->
+        <mxCell id="email-types" value="Supported Email Types" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FFF0;strokeColor=#32CD32;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#228B22;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="950" y="450" width="400" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="email-type-list" value="Email Content Types:&#xa;• Plain Text: Simple text messages&#xa;• HTML: Rich formatted content&#xa;• Mixed: Both plain text and HTML&#xa;• Attachments: Binary file support&#xa;• Templates: Pre-configured layouts&#xa;• Bulk: High-volume campaigns" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="970" y="480" width="360" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Performance Metrics -->
+        <mxCell id="performance-section" value="Performance &amp; Monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#DDD700;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#8B8000;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="50" y="600" width="1300" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="metrics-list" value="Key Performance Indicators:&#xa;• Email Delivery Rate: Percentage of successfully delivered emails&#xa;• Bounce Rate: Failed delivery attempts (hard/soft bounces)&#xa;• Open Rate: Email engagement tracking (if enabled)&#xa;• Click Rate: Link interaction analytics&#xa;• Processing Time: End-to-end email send duration&#xa;• API Response Time: MCP tool execution performance&#xa;• Error Rate: Failed requests and common causes&#xa;• Throughput: Emails processed per minute/hour" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="630" width="1200" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Connection from Email Tools to Processing -->
+        <mxCell id="tools-to-processing" value="Email Processing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#32CD32;strokeWidth=2;fontSize=9;fontColor=#32CD32;" edge="1" parent="1" source="email-tools" target="email-client">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="454" y="280" />
+              <mxPoint x="134" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
