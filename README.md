@@ -14,7 +14,7 @@ This project is a C# .NET 8 MCP (Model Context Protocol) server, designed to run
 
 ## Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0?WT.mc_id=AZ-MVP-5004796)
 - [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local?WT.mc_id=AZ-MVP-5004796)
 - [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd?WT.mc_id=AZ-MVP-5004796)
 - [Visual Studio Code](https://code.visualstudio.com/) (recommended)
