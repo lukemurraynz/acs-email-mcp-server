@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-12-19T18:00:00.000Z" agent="5.0" etag="example" version="24.0.0">
+  <diagram name="MCP Connection Scenarios" id="mcp-scenarios">
+    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Background -->
+        <mxCell id="background" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B3B4D;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1400" height="1000" as="geometry" />
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="MCP Server Connection Scenarios" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=24;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="400" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Scenario 1: Direct Connection -->
+        <mxCell id="scenario1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2D4A5A;strokeColor=#00B7C3;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="1300" height="380" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="scenario1-title" value="Scenario 1: Direct MCP Connection" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;fontColor=#00B7C3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="110" width="400" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="scenario1-desc" value="Client connects directly to Azure Function App using function key authentication" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="70" y="140" width="500" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Client Section S1 -->
+        <mxCell id="s1-client-section" value="Developer Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3A5F73;strokeColor=#40E0D0;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#40E0D0;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="280" height="260" as="geometry" />
+        </mxCell>
+        
+        <!-- VS Code -->
+        <mxCell id="s1-vscode" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Visual_Studio_Code.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="110" y="220" width="50" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-vscode-label" value="VS Code with&#xa;MCP Extension" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="85" y="275" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- AI Agent -->
+        <mxCell id="s1-agent" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/ai_machine_learning/Cognitive_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="50" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-agent-label" value="AI Agent&#xa;(Claude/Copilot)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="195" y="275" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- MCP Connection S1 -->
+        <mxCell id="s1-mcp-connection" value="MCP Protocol" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=10;fontColor=#40E0D0;" edge="1" parent="1" source="s1-vscode" target="s1-agent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-config" value="Configuration:&#xa;• Function App URL&#xa;• Function Key&#xa;• Direct HTTPS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A6B7A;strokeColor=#40E0D0;strokeWidth=1;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="100" y="320" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Section S1 -->
+        <mxCell id="s1-azure-section" value="Microsoft Azure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3A5F73;strokeColor=#00B7C3;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#00B7C3;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="450" y="180" width="850" height="260" as="geometry" />
+        </mxCell>
+        
+        <!-- Function App S1 -->
+        <mxCell id="s1-function" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/compute/Function_Apps.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="220" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-function-label" value="Azure Functions&#xa;MCP Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="480" y="285" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- ACS S1 -->
+        <mxCell id="s1-acs" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/communication/Communication_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="680" y="220" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-acs-label" value="Azure Communication&#xa;Services (Email)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="660" y="285" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Delivery S1 -->
+        <mxCell id="s1-email" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Email.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="220" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-email-label" value="Email&#xa;Delivery" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="860" y="285" width="68" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections S1 -->
+        <mxCell id="s1-to-function" value="HTTPS + Function Key" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00B7C3;strokeWidth=3;fontSize=10;fontColor=#00B7C3;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s1-client-section" target="s1-function">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="250" as="sourcePoint" />
+            <mxPoint x="500" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="s1-to-acs" value="Managed Identity" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#32CD32;strokeWidth=2;fontSize=10;fontColor=#32CD32;" edge="1" parent="1" source="s1-function" target="s1-acs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-to-email" value="SMTP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#32CD32;strokeWidth=2;fontSize=10;fontColor=#32CD32;" edge="1" parent="1" source="s1-acs" target="s1-email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s1-auth-note" value="Authentication:&#xa;• Function Key&#xa;• No OAuth required&#xa;• Direct access" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A6B7A;strokeColor=#32CD32;strokeWidth=1;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="320" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Scenario 2: APIM Connection -->
+        <mxCell id="scenario2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2D4A5A;strokeColor=#8B5FBF;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="50" y="520" width="1300" height="430" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="scenario2-title" value="Scenario 2: APIM with Entra ID Authentication" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;fontColor=#8B5FBF;" vertex="1" parent="1">
+          <mxGeometry x="70" y="530" width="500" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="scenario2-desc" value="Client connects via API Management with OAuth2/Entra ID authentication before forwarding to Function App" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="70" y="560" width="600" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Client Section S2 -->
+        <mxCell id="s2-client-section" value="Developer Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3A5F73;strokeColor=#40E0D0;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#40E0D0;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="280" height="310" as="geometry" />
+        </mxCell>
+        
+        <!-- VS Code S2 -->
+        <mxCell id="s2-vscode" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Visual_Studio_Code.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="110" y="640" width="50" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-vscode-label" value="VS Code with&#xa;MCP Extension" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="85" y="695" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- AI Agent S2 -->
+        <mxCell id="s2-agent" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/ai_machine_learning/Cognitive_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="640" width="50" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-agent-label" value="AI Agent&#xa;(Claude/Copilot)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="195" y="695" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- MCP Connection S2 -->
+        <mxCell id="s2-mcp-connection" value="MCP Protocol" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#40E0D0;strokeWidth=2;fontSize=10;fontColor=#40E0D0;" edge="1" parent="1" source="s2-vscode" target="s2-agent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-config" value="Configuration:&#xa;• APIM Gateway URL&#xa;• OAuth2/PKCE&#xa;• Entra ID Auth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A6B7A;strokeColor=#8B5FBF;strokeWidth=1;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="100" y="740" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Section S2 -->
+        <mxCell id="s2-azure-section" value="Microsoft Azure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3A5F73;strokeColor=#8B5FBF;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#8B5FBF;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="450" y="600" width="850" height="310" as="geometry" />
+        </mxCell>
+        
+        <!-- APIM S2 -->
+        <mxCell id="s2-apim" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/app_services/API_Management_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="640" width="68" height="62" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-apim-label" value="API Management&#xa;OAuth2 Gateway" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="460" y="705" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Entra ID S2 -->
+        <mxCell id="s2-entra" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/identity/Azure_Active_Directory.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="780" width="68" height="62" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-entra-label" value="Microsoft Entra ID&#xa;Identity Provider" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="460" y="845" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Function App S2 -->
+        <mxCell id="s2-function" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/compute/Function_Apps.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="640" y="640" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-function-label" value="Azure Functions&#xa;MCP Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="620" y="705" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- ACS S2 -->
+        <mxCell id="s2-acs" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/communication/Communication_Services.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="820" y="640" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-acs-label" value="Azure Communication&#xa;Services (Email)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="800" y="705" width="108" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Email Delivery S2 -->
+        <mxCell id="s2-email" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/azure2/other/Email.svg;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="640" width="68" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-email-label" value="Email&#xa;Delivery" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="705" width="68" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections S2 -->
+        <mxCell id="s2-to-apim" value="HTTPS + OAuth2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8B5FBF;strokeWidth=3;fontSize=10;fontColor=#8B5FBF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2-client-section" target="s2-apim">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="670" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="s2-auth-flow" value="OAuth2/PKCE&#xa;Authentication" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9C4F96;strokeWidth=2;fontSize=10;fontColor=#9C4F96;startArrow=classic;startFill=1;" edge="1" parent="1" source="s2-apim" target="s2-entra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-to-function" value="Authenticated Request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8B5FBF;strokeWidth=2;fontSize=10;fontColor=#8B5FBF;" edge="1" parent="1" source="s2-apim" target="s2-function">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-to-acs" value="Managed Identity" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#32CD32;strokeWidth=2;fontSize=10;fontColor=#32CD32;" edge="1" parent="1" source="s2-function" target="s2-acs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-to-email" value="SMTP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#32CD32;strokeWidth=2;fontSize=10;fontColor=#32CD32;" edge="1" parent="1" source="s2-acs" target="s2-email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s2-auth-note" value="Authentication:&#xa;• OAuth2/PKCE Flow&#xa;• Entra ID Tokens&#xa;• APIM Policies&#xa;• Enhanced Security" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A6B7A;strokeColor=#9C4F96;strokeWidth=1;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="760" width="140" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2D4A5A;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="100" width="200" height="140" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="110" width="100" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-direct" value="Direct Connection" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#00B7C3;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="140" width="120" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-oauth" value="OAuth2/Authentication" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#8B5FBF;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="160" width="120" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-managed" value="Managed Identity" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#32CD32;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="180" width="120" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-mcp" value="MCP Protocol" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#40E0D0;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="200" width="120" height="15" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

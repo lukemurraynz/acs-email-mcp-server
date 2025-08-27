@@ -1,0 +1,44 @@
+{
+	"name": "Azure MCP Email Server",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {
+			"installBicep": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "20"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.csdevkit",
+				"ms-azuretools.vscode-azurefunctions",
+				"ms-azuretools.vscode-bicep",
+				"ms-azuretools.azure-dev",
+				"hediet.vscode-drawio"
+			],
+			"settings": {
+				"dotnet.defaultSolution": "AcsEmailMcp.csproj"
+			}
+		}
+	},
+	"postCreateCommand": "bash .devcontainer/setup.sh",
+	"forwardPorts": [
+		7071,
+		8080
+	],
+	"portsAttributes": {
+		"7071": {
+			"label": "Azure Functions",
+			"onAutoForward": "notify"
+		},
+		"8080": {
+			"label": "MCP Server",
+			"onAutoForward": "notify"
+		}
+	}
+}
