@@ -76,7 +76,7 @@ This will provision all required resources and deploy the app. See `infra/` for 
 
 ## Documentation
 
-- [Diagrams](./diagrams/)
+- [Diagrams](./docs/diagrams/)
 
 ## License
 
