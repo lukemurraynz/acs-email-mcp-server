@@ -11,7 +11,7 @@
 
     <ItemGroup>
         <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.3.0-preview.1" />
-        <PackageReference Include="Azure.Communication.Email" Version="1.0.1" />
+        <PackageReference Include="Azure.Communication.Email" Version="1.0.2" />
         <PackageReference Include="Azure.Identity" Version="1.16.0" />
         <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
         <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="4.0.0" />
